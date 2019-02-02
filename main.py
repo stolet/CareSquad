@@ -52,20 +52,20 @@ def main():
     if oldSleepAvg > recentSleepAvg:
         sleepDiff = oldSleepAvg - recentSleepAvg
         percentage = 100 * (sleepDiff / oldSleepAvg)
-        print("Your sleep decreased by " + str(percentage) + "% in the last 10 days")
+        print("Your sleep decreased by " + str(round(percentage, 2)) + "% in the last 10 days")
     else:
         sleepDiff = recentSleepAvg - oldSleepAvg
         percentage = 100 * (sleepDiff / oldSleepAvg)
-        print("Your sleep increased by " + str(percentage) + "% in the last 10 days")
+        print("Your sleep increased by " + str(round(percentage, 2)) + "% in the last 10 days")
 
     if oldDeepSleepAvg > recentDeepSleepAvg:
         sleepDiff = oldDeepSleepAvg - recentDeepSleepAvg
         percentage = 100 * (sleepDiff / oldDeepSleepAvg)
-        print("Your deep sleep decreased by " + str(percentage) + "% in the last 10 days")
+        print("Your deep sleep decreased by " + str(round(percentage, 2)) + "% in the last 10 days")
     else:
         sleepDiff = recentDeepSleepAvg - oldDeepSleepAvg
         percentage = 100 * (sleepDiff / oldDeepSleepAvg)
-        print("Your deep sleep increased by " + str(percentage) + "% in the last 10 days")
+        print("Your deep sleep increased by " + str(round(percentage, 2)) + "% in the last 10 days")
 
 
 if __name__ == '__main__':
